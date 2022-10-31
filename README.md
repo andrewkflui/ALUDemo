@@ -84,15 +84,20 @@ There are four demos useful for a gradual introduction to the operation of a com
 <img width="752" alt="ALUMemory" src="https://user-images.githubusercontent.com/8808539/199018583-cf0bc501-5594-4b60-a01a-a1606807378b.png">
 <img width="752" alt="ALUPCMemory" src="https://user-images.githubusercontent.com/8808539/199018599-fc9ba496-1d8d-4469-baaf-de3ae1598ffe.png">
 
+#### Suggestion on How to Use the Processor Demo
+1. Start from the ALU Demo with one register. Emphasis the following (1) the input port and the output port can be in a state of Open (connecting to the bus) or CLosed (not reading nor writing from the bus), (2) the buses connect the output port of one component to the input port of another component. The Closed state means that the component is not prepared to read or write data at the port. 
+2. Emphasis that the components only do work at the signal, which means when the "Send Clock Signal" button is pressed. 
+3. Discuss the ALU operationd (add, subtract, and set) and the data used in these operations. For example, the add function has two operands, one from the register's output and another from the ALU output. Set a value on the ALU and the register, select "add", and press the signal button to show that the updated value is seen in the ALU.
+I will stop here and hopefully this is enough to give you an idea.
+
 ### Fetch and Execution Cycle of the LMC Illustrated
 Finally, these three demos have put together all the components of a processor. The last two enables the loading of a LMC program into the memory system and execute the instructions (and the steps in the fetch and execution cycle) one by one.
 * The LMC Demo (`faifai.aludemo.LMCDemo`): LMC implemention with the full set of components
 * LMC Program Execution Demo (`faifai.aludemo.LMCOperationDemo`): The fetch and execution cycle on the LMC illustrated
 * Program Execution (Faster) Demo (`faifai.aludemo.LMCOperationDemoFast`): The cycle runs a bit faster by combining steps
 
-#### Screenshots
+#### Screenshot of the LMC Program Execution Demo
 
-<img width="712" alt="LMCDemo" src="https://user-images.githubusercontent.com/8808539/199019362-3c5f35de-c644-4288-aa93-785c016c389b.png">
 <img width="912" alt="LMCOperation" src="https://user-images.githubusercontent.com/8808539/199019379-8137ada5-5317-47f5-acf4-dab281690515.png">
 
 #### Suggestion on How to Use the LMC Program Execution Demo.
@@ -102,5 +107,5 @@ Finally, these three demos have put together all the components of a processor. 
 4. The first step is PC > MAR, which is shown on the left. Press a button once to execute this step. Show that MAR is now 000.
 5. The next step MEM[MAR] > MDR is shown. Press the signal button to execute, show MDR is changed from 000 to 901.
 6. The next step is MDR > IR. Press the signal button to execute and show that 901 is loaded into IR.
-I will stop here and hopefully this is enough to give you an idea.
+I also stop here now and this should be enough to give you an idea.
 
