@@ -70,13 +70,20 @@ There are four demos useful for a gradual introduction to the operation of a com
 * ALU with Memory System Demo (`faifai.aludemo.ALUMemoryDemo`)
 * ALU, Program Counter, and Memory System Demo (`faifai.aludemo.ALUPCMemoryDemo`)
 
-Features
+#### Features of each component
 * Every component widget offers one or more of the following features.
-** 
+** Set a new value
+** Change the open/closed of the input (read) and the output (write) ports
+** Other features relevant to the component (for example, view, load and save of the Memory System)
+* Pressing the Signal button will simulate a signal activating all the components once. 
 
+#### Screenshots
 
 ### Fetch and Execution Cycle of the LMC Illustrated
 Finally, these three demos have put together all the components of a processor. The last two enables the loading of a LMC program into the memory system and execute the instructions (and the steps in the fetch and execution cycle) one by one.
 * The LMC Demo (`faifai.aludemo.LMCDemo`): LMC implemention with the full set of components
 * LMC Program Execution Demo (`faifai.aludemo.LMCOperationDemo`): The fetch and execution cycle on the LMC illustrated
 * Program Execution (Faster) Demo (`faifai.aludemo.LMCOperationDemoFast`): The cycle runs a bit faster by combining steps
+
+
+#### Screenshots
