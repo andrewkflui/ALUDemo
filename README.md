@@ -60,8 +60,7 @@ Alternatively, each of the 5 applications can be executed from their main classe
 Class: `faifai.arch.IEEE754Bit32Demo`
 
 This demo is actually not part of the fetch and execution cycle demo, but included in this repository because this seems a useful teaching and learning tool.
-
-
+<img width="832" alt="IEEE754" src="https://user-images.githubusercontent.com/8808539/199018530-6aae2bc0-52f8-404b-bfdb-a2d1516740c1.png">
 
 ### A Gradual Introduction to a Computer Processor
 There are four demos useful for a gradual introduction to the operation of a computer processor and the basics of fetch and execution cycle.
@@ -73,11 +72,17 @@ There are four demos useful for a gradual introduction to the operation of a com
 #### Features of each component
 * Every component widget offers one or more of the following features.
 ** Set a new value
+** Toggle between decimal and hexadecimal view
 ** Change the open/closed of the input (read) and the output (write) ports
-** Other features relevant to the component (for example, view, load and save of the Memory System)
+** The Memory Sytem enables set value of MAR and MDR, and also view, load and save all the data in the memory (size 256)
+** The ALU enables selection of 3 instructions: add, subtract, and set
 * Pressing the Signal button will simulate a signal activating all the components once. 
 
 #### Screenshots
+<img width="592" alt="ALUDemo" src="https://user-images.githubusercontent.com/8808539/199018564-5c604c27-2d9a-4d66-8c2c-602727be392a.png">
+<img width="592" alt="ALUTwoReg" src="https://user-images.githubusercontent.com/8808539/199018574-1b42bef1-85d3-47d1-a9fa-c079becacd83.png">
+<img width="752" alt="ALUMemory" src="https://user-images.githubusercontent.com/8808539/199018583-cf0bc501-5594-4b60-a01a-a1606807378b.png">
+<img width="752" alt="ALUPCMemory" src="https://user-images.githubusercontent.com/8808539/199018599-fc9ba496-1d8d-4469-baaf-de3ae1598ffe.png">
 
 ### Fetch and Execution Cycle of the LMC Illustrated
 Finally, these three demos have put together all the components of a processor. The last two enables the loading of a LMC program into the memory system and execute the instructions (and the steps in the fetch and execution cycle) one by one.
@@ -85,5 +90,17 @@ Finally, these three demos have put together all the components of a processor. 
 * LMC Program Execution Demo (`faifai.aludemo.LMCOperationDemo`): The fetch and execution cycle on the LMC illustrated
 * Program Execution (Faster) Demo (`faifai.aludemo.LMCOperationDemoFast`): The cycle runs a bit faster by combining steps
 
-
 #### Screenshots
+
+<img width="712" alt="LMCDemo" src="https://user-images.githubusercontent.com/8808539/199019362-3c5f35de-c644-4288-aa93-785c016c389b.png">
+<img width="912" alt="LMCOperation" src="https://user-images.githubusercontent.com/8808539/199019379-8137ada5-5317-47f5-acf4-dab281690515.png">
+
+#### Suggestion on How to Use the LMC Program Execution Demo.
+1. A LMC program (Add 2 numbers) should have been pre-loaded into the memory system. Alternatively, load another memory file or enter your own program.  Press the View Data button on the Memory System to show that to the students.
+2. Emphaize the PC is now 000, meaning that the next address to execute is 0.  
+3. Describe the purpose of pressing the "Send Clock Signal" button, which runs a step in the fetch and execution cycle. 
+4. The first step is PC > MAR, which is shown on the left. Press a button once to execute this step. Show that MAR is now 000.
+5. The next step MEM[MAR] > MDR is shown. Press the signal button to execute, show MDR is changed from 000 to 901.
+6. The next step is MDR > IR. Press the signal button to execute and show that 901 is loaded into IR.
+I will stop here and hopefully this is enough to give you an idea.
+
